@@ -7,6 +7,8 @@ useHead({
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <h1 class="text-sm font-bold">aml walaed</h1>
+    <header class="bg-black p-4">
+      <AppLogo to="/" preload />
+    </header>
   </div>
 </template>
