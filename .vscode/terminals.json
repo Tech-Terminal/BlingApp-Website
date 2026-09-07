@@ -1,0 +1,22 @@
+{
+  "autorun": true,
+  "autokill": true,
+  "terminals": [
+    {
+      "name": "dev",
+      "description": "Nuxt development server",
+      "icon": "server-process",
+      "color": "terminal.ansiGreen",
+      "command": "pnpm dev",
+      "focus": true,
+      "open": true
+    },
+    {
+      "name": "shell",
+      "description": "Project shell",
+      "icon": "terminal",
+      "color": "terminal.ansiBlue",
+      "open": true
+    }
+  ]
+}
