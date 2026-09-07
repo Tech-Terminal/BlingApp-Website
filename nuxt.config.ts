@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@nuxt/image"],
+  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/fonts"],
   css: ["~/assets/css/index.css"],
   app: {
     head: {
@@ -25,6 +25,15 @@ export default defineNuxtConfig({
       ],
       meta: [{ name: "apple-mobile-web-app-title", content: "Bling" }],
     },
+  },
+  fonts: {
+    families: [
+      {
+        name: "Inter",
+        provider: "google",
+        weights: [400, 500, 600, 700, 800, 900],
+      },
+    ],
   },
   vite: {
     plugins: [tailwindcss()],
