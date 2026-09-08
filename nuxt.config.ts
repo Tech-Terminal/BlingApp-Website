@@ -3,7 +3,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/fonts"],
+  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/fonts", "nuxt-i18n-micro"],
   css: ["~/assets/css/index.css"],
   app: {
     head: {
@@ -34,6 +34,13 @@ export default defineNuxtConfig({
         weights: [400, 500, 600, 700, 800, 900],
       },
     ],
+  },
+  i18n: {
+    locales: [
+      { code: "en", language: "en-US", dir: "ltr" },
+      { code: "ar", language: "ar-SA", dir: "rtl" },
+    ],
+    defaultLocale: "ar",
   },
   vite: {
     plugins: [tailwindcss()],
