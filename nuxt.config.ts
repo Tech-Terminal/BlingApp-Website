@@ -46,6 +46,7 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "ar",
     fallbackLocale: "ar",
+    autoDetectLanguage: false,
   },
   vite: {
     plugins: [tailwindcss()],
