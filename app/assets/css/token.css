@@ -1,0 +1,430 @@
+@theme inline {
+  --color-bg-bg: light-dark(var(--color-base-white), var(--color-base-black));
+  --color-bg-solid: light-dark(
+    var(--color-neutral-100),
+    var(--color-base-black)
+  );
+  --color-bg-pink: light-dark(#ea75aa, var(--color-base-black));
+  --color-bg-ment: light-dark(#91d3c7, var(--color-base-black));
+  --color-bg-disabled: light-dark(
+    var(--color-neutral-200),
+    var(--color-neutral-800)
+  );
+  --color-bg-modal: light-dark(
+    var(--color-base-white),
+    var(--color-neutral-900)
+  );
+  --color-bg-transparent: light-dark(
+    var(--color-base-transparent),
+    var(--color-base-transparent)
+  );
+  --color-bg-divider: light-dark(
+    var(--color-neutral-400),
+    var(--color-neutral-600)
+  );
+  --color-bg-secondary: light-dark(var(--color-pink-50), var(--color-pink-50));
+  --color-bg-primary: light-dark(
+    var(--color-primary-500),
+    var(--color-primary-500)
+  );
+  --color-bg-primary-subtle: light-dark(
+    var(--color-primary-50),
+    var(--color-primary-50)
+  );
+
+  --color-shades-primary-1: light-dark(
+    var(--color-primary-50),
+    var(--color-primary-900)
+  );
+  --color-shades-primary-2: light-dark(
+    var(--color-primary-200),
+    var(--color-primary-800)
+  );
+  --color-shades-primary-3: light-dark(
+    var(--color-primary-300),
+    var(--color-primary-700)
+  );
+  --color-shades-primary-4: light-dark(
+    var(--color-primary-100),
+    var(--color-primary-900)
+  );
+  --color-shades-primary-5: light-dark(
+    var(--color-primary-300),
+    var(--color-primary-700)
+  );
+  --color-shades-info-1: light-dark(
+    var(--color-info-100),
+    var(--color-info-900)
+  );
+  --color-shades-info-2: light-dark(
+    var(--color-info-200),
+    var(--color-info-800)
+  );
+  --color-shades-info-3: light-dark(
+    var(--color-info-300),
+    var(--color-info-700)
+  );
+  --color-shades-info-4: light-dark(
+    var(--color-info-100),
+    var(--color-info-900)
+  );
+  --color-shades-info-5: light-dark(
+    var(--color-info-300),
+    var(--color-info-700)
+  );
+  --color-shades-warning-1: light-dark(
+    var(--color-warning-100),
+    var(--color-warning-900)
+  );
+  --color-shades-warning-2: light-dark(
+    var(--color-warning-200),
+    var(--color-warning-800)
+  );
+  --color-shades-warning-3: light-dark(
+    var(--color-warning-300),
+    var(--color-warning-700)
+  );
+  --color-shades-warning-4: light-dark(
+    var(--color-warning-100),
+    var(--color-warning-900)
+  );
+  --color-shades-warning-5: light-dark(
+    var(--color-warning-300),
+    var(--color-warning-700)
+  );
+  --color-shades-success-1: light-dark(
+    var(--color-success-100),
+    var(--color-success-900)
+  );
+  --color-shades-success-2: light-dark(
+    var(--color-success-200),
+    var(--color-success-800)
+  );
+  --color-shades-success-3: light-dark(
+    var(--color-success-300),
+    var(--color-success-700)
+  );
+  --color-shades-success-4: light-dark(
+    var(--color-success-100),
+    var(--color-success-900)
+  );
+  --color-shades-success-5: light-dark(
+    var(--color-success-300),
+    var(--color-success-700)
+  );
+  --color-shades-danger-1: light-dark(
+    var(--color-danger-100),
+    var(--color-danger-900)
+  );
+  --color-shades-danger-2: light-dark(
+    var(--color-danger-200),
+    var(--color-danger-800)
+  );
+  --color-shades-danger-3: light-dark(
+    var(--color-danger-300),
+    var(--color-danger-700)
+  );
+  --color-shades-danger-4: light-dark(
+    var(--color-danger-100),
+    var(--color-danger-900)
+  );
+  --color-shades-danger-5: light-dark(
+    var(--color-danger-100),
+    var(--color-danger-900)
+  );
+
+  --color-txt-base: light-dark(
+    var(--color-base-white),
+    var(--color-neutral-950)
+  );
+  --color-txt-default: light-dark(
+    var(--color-neutral-950),
+    var(--color-base-white)
+  );
+  --color-txt-primary: light-dark(
+    var(--color-primary-700),
+    var(--color-primary-300)
+  );
+  --color-txt-secondary: light-dark(
+    var(--color-pink-500),
+    var(--color-pink-500)
+  );
+  --color-txt-info: light-dark(var(--color-info-700), var(--color-info-300));
+  --color-txt-success: light-dark(
+    var(--color-success-700),
+    var(--color-success-300)
+  );
+  --color-txt-warning: light-dark(
+    var(--color-warning-700),
+    var(--color-warning-300)
+  );
+  --color-txt-danger: light-dark(
+    var(--color-danger-700),
+    var(--color-danger-300)
+  );
+  --color-txt-placeholder: light-dark(
+    var(--color-neutral-500),
+    var(--color-neutral-500)
+  );
+  --color-txt-caption: light-dark(
+    var(--color-neutral-600),
+    var(--color-neutral-400)
+  );
+  --color-txt-disabled: light-dark(
+    var(--color-neutral-400),
+    var(--color-neutral-600)
+  );
+  --color-txt-on-primary: light-dark(
+    var(--color-primary-50),
+    var(--color-primary-50)
+  );
+  --color-txt-invert-base: light-dark(
+    var(--color-neutral-950),
+    var(--color-base-white)
+  );
+  --color-txt-invert-default: light-dark(
+    var(--color-base-white),
+    var(--color-neutral-950)
+  );
+  --color-txt-invert-primary: light-dark(
+    var(--color-primary-100),
+    var(--color-primary-900)
+  );
+  --color-txt-invert-buy: light-dark(
+    var(--color-primary-100),
+    var(--color-primary-900)
+  );
+  --color-txt-invert-sell: light-dark(
+    var(--color-primary-100),
+    var(--color-primary-900)
+  );
+  --color-txt-invert-info: light-dark(
+    var(--color-info-100),
+    var(--color-info-900)
+  );
+  --color-txt-invert-success: light-dark(
+    var(--color-success-100),
+    var(--color-success-900)
+  );
+  --color-txt-invert-warning: light-dark(
+    var(--color-warning-100),
+    var(--color-warning-900)
+  );
+  --color-txt-invert-danger: light-dark(
+    var(--color-danger-100),
+    var(--color-danger-900)
+  );
+  --color-txt-invert-placeholder: light-dark(
+    var(--color-neutral-500),
+    var(--color-neutral-500)
+  );
+  --color-txt-invert-caption: light-dark(
+    var(--color-neutral-100),
+    var(--color-neutral-900)
+  );
+
+  --color-icons-base: light-dark(
+    var(--color-base-white),
+    var(--color-neutral-950)
+  );
+  --color-icons-default: light-dark(
+    var(--color-neutral-950),
+    var(--color-base-white)
+  );
+  --color-icons-primary: light-dark(
+    var(--color-primary-700),
+    var(--color-primary-300)
+  );
+  --color-icons-buy: light-dark(
+    var(--color-success-700),
+    var(--color-success-300)
+  );
+  --color-icons-sell: light-dark(
+    var(--color-danger-700),
+    var(--color-danger-300)
+  );
+  --color-icons-info: light-dark(var(--color-info-700), var(--color-info-300));
+  --color-icons-success: light-dark(
+    var(--color-success-700),
+    var(--color-success-300)
+  );
+  --color-icons-warning: light-dark(
+    var(--color-warning-700),
+    var(--color-warning-300)
+  );
+  --color-icons-danger: light-dark(
+    var(--color-danger-700),
+    var(--color-danger-300)
+  );
+  --color-icons-placeholder: light-dark(
+    var(--color-neutral-500),
+    var(--color-neutral-500)
+  );
+  --color-icons-caption: light-dark(
+    var(--color-neutral-600),
+    var(--color-neutral-400)
+  );
+  --color-icons-link: light-dark(var(--color-blue-700), var(--color-blue-300));
+  --color-icons-disabled: light-dark(
+    var(--color-neutral-400),
+    var(--color-neutral-600)
+  );
+  --color-icons-invert-base: light-dark(
+    var(--color-neutral-950),
+    var(--color-base-white)
+  );
+  --color-icons-invert-default: light-dark(
+    var(--color-base-white),
+    var(--color-neutral-950)
+  );
+  --color-icons-invert-primary: light-dark(
+    var(--color-primary-100),
+    var(--color-primary-900)
+  );
+  --color-icons-invert-buy: light-dark(
+    var(--color-primary-100),
+    var(--color-primary-900)
+  );
+  --color-icons-invert-sell: light-dark(
+    var(--color-primary-100),
+    var(--color-primary-900)
+  );
+  --color-icons-invert-info: light-dark(
+    var(--color-info-100),
+    var(--color-info-900)
+  );
+  --color-icons-invert-success: light-dark(
+    var(--color-success-100),
+    var(--color-success-900)
+  );
+  --color-icons-invert-warning: light-dark(
+    var(--color-warning-100),
+    var(--color-warning-900)
+  );
+  --color-icons-invert-danger: light-dark(
+    var(--color-danger-100),
+    var(--color-danger-900)
+  );
+  --color-icons-invert-placeholder: light-dark(
+    var(--color-neutral-500),
+    var(--color-neutral-500)
+  );
+  --color-icons-invert-caption: light-dark(
+    var(--color-neutral-100),
+    var(--color-neutral-900)
+  );
+  --color-icons-invert-link: light-dark(
+    var(--color-blue-100),
+    var(--color-blue-900)
+  );
+
+  --color-border-base: light-dark(var(--color-base-white), #030712);
+  --color-border-default: light-dark(
+    var(--color-neutral-400),
+    var(--color-neutral-600)
+  );
+  --color-border-primary: light-dark(
+    var(--color-primary-700),
+    var(--color-primary-300)
+  );
+  --color-border-info: light-dark(var(--color-info-700), var(--color-info-300));
+  --color-border-success: light-dark(
+    var(--color-success-700),
+    var(--color-success-300)
+  );
+  --color-border-warning: light-dark(
+    var(--color-warning-700),
+    var(--color-warning-300)
+  );
+  --color-border-danger: light-dark(
+    var(--color-danger-700),
+    var(--color-danger-300)
+  );
+  --color-border-ring: light-dark(var(--color-blue-300), var(--color-blue-700));
+  --color-border-disabled: light-dark(
+    var(--color-neutral-300),
+    var(--color-neutral-700)
+  );
+
+  --color-tags-base: light-dark(
+    var(--color-base-white),
+    var(--color-neutral-950)
+  );
+  --color-tags-default: light-dark(
+    var(--color-neutral-950),
+    var(--color-base-white)
+  );
+  --color-tags-primary: light-dark(
+    var(--color-primary-700),
+    var(--color-primary-300)
+  );
+  --color-tags-buy: light-dark(
+    var(--color-success-400),
+    var(--color-primary-300)
+  );
+  --color-tags-sell: light-dark(
+    var(--color-danger-400),
+    var(--color-primary-300)
+  );
+  --color-tags-info: light-dark(var(--color-info-700), var(--color-info-300));
+  --color-tags-success: light-dark(
+    var(--color-success-700),
+    var(--color-success-300)
+  );
+  --color-tags-warning: light-dark(
+    var(--color-warning-700),
+    var(--color-warning-300)
+  );
+  --color-tags-danger: light-dark(
+    var(--color-danger-700),
+    var(--color-danger-300)
+  );
+  --color-tags-neutral: light-dark(
+    var(--color-neutral-500),
+    var(--color-neutral-500)
+  );
+  --color-tags-invert-base: light-dark(
+    var(--color-neutral-950),
+    var(--color-base-white)
+  );
+  --color-tags-invert-default: light-dark(
+    var(--color-base-white),
+    var(--color-neutral-950)
+  );
+  --color-tags-invert-primary: light-dark(
+    var(--color-primary-100),
+    var(--color-primary-900)
+  );
+  --color-tags-invert-info: light-dark(
+    var(--color-info-100),
+    var(--color-info-900)
+  );
+  --color-tags-invert-success: light-dark(
+    var(--color-success-100),
+    var(--color-success-900)
+  );
+  --color-tags-invert-warning: light-dark(
+    var(--color-warning-100),
+    var(--color-warning-900)
+  );
+  --color-tags-invert-danger: light-dark(
+    var(--color-danger-100),
+    var(--color-danger-900)
+  );
+  --color-tags-invert-placeholder: light-dark(
+    var(--color-neutral-500),
+    var(--color-neutral-500)
+  );
+  --color-tags-invert-caption: light-dark(
+    var(--color-neutral-100),
+    var(--color-neutral-900)
+  );
+  --color-tags-invert-link: light-dark(
+    var(--color-blue-100),
+    var(--color-blue-900)
+  );
+  --color-tags-invert-loading: light-dark(
+    var(--color-neutral-100),
+    var(--color-neutral-900)
+  );
+}

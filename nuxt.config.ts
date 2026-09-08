@@ -23,15 +23,19 @@ export default defineNuxtConfig({
         },
         { rel: "manifest", href: "/site.webmanifest" },
       ],
-      meta: [{ name: "apple-mobile-web-app-title", content: "Bling" }],
+      meta: [
+        { name: "apple-mobile-web-app-title", content: "Bling" },
+        { name: "color-scheme", content: "light" },
+        { name: "theme-color", content: "#ffffff" },
+      ],
     },
   },
   fonts: {
     families: [
       {
-        name: "Inter",
+        name: "IBM Plex Sans Arabic",
         provider: "google",
-        weights: [400, 500, 600, 700, 800, 900],
+        weights: [400, 500, 600, 700],
       },
     ],
   },
@@ -41,6 +45,7 @@ export default defineNuxtConfig({
       { code: "ar", language: "ar-SA", dir: "rtl" },
     ],
     defaultLocale: "ar",
+    fallbackLocale: "ar",
   },
   vite: {
     plugins: [tailwindcss()],

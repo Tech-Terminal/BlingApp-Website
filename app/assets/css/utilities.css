@@ -1,0 +1,12 @@
+@utility grid-auto-fit-* {
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(min(--value(--spacing-*), 100%), 1fr)
+  );
+}
+@utility grid-auto-fill-* {
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(min(--value(--spacing-*), 100%), 1fr)
+  );
+}

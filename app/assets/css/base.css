@@ -1,0 +1,70 @@
+@layer base {
+  :root {
+    --navbar-height: var(--spacing-16);
+    --main-content-padding: var(--spacing-4);
+    --main-content-min-height: calc(100svh - var(--navbar-height));
+    --sidebar-top: calc(var(--navbar-height) + var(--main-content-padding));
+
+    --scrollbar-thumb-bg: var(--color-bg-primary);
+    --scrollbar-thumb-hover-bg: var(--color-shades-primary-3);
+    --scrollbar-track-bg: var(--color-bg-primary-subtle);
+    --scrollbar-track-hover-bg: var(--color-shades-primary-1);
+
+    font-family: var(--font-default);
+
+    color-scheme: light;
+  }
+  @supports (font-variation-settings: normal) {
+    :root {
+      --font-default: "InterVariable", sans-serif;
+    }
+  }
+
+  ::selection {
+    background-color: var(--color-bg-primary);
+    color: var(--color-txt-on-primary);
+  }
+
+  ::-webkit-scrollbar {
+    width: 0.35em;
+    height: 0.25em;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-bg);
+    border-radius: 20px;
+    margin-block: 2px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    width: 0.5em;
+    background-color: var(--scrollbar-thumb-bg);
+    border-radius: 8px;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+    background-color: var(--scrollbar-track-hover-bg);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover-bg);
+  }
+  body {
+    @apply bg-bg-bg text-txt-default text-base;
+  }
+
+  input,
+  textarea {
+    caret-color: var(--color-txt-default);
+  }
+
+  /* Fix autofill appearance */
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: var(--color-txt-default);
+    caret-color: var(--color-txt-default);
+  }
+}
