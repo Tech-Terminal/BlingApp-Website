@@ -18,12 +18,14 @@
     "@hugeicons/core-free-icons": "^4.3.2",
     "@hugeicons/vue": "^1.0.8",
     "@nuxt/fonts": "0.14.0",
+    "@nuxt/icon": "2.5.1",
     "@nuxt/image": "2.1.0",
     "@vueuse/core": "^14.4.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "nuxt": "^4.5.2",
     "nuxt-i18n-micro": "^3.28.5",
+    "reka-ui": "^2.10.4",
     "shadcn-nuxt": "2.8.2",
     "tailwind-merge": "^3.6.0",
     "vue": "^3.5.42",
@@ -31,6 +33,7 @@
     "yup": "^1.7.1"
   },
   "devDependencies": {
+    "@iconify-json/hugeicons": "^1.2.34",
     "@nuxt/eslint": "^1.17.0",
     "@tailwindcss/vite": "^4.3.3",
     "eslint": "^10.10.0",

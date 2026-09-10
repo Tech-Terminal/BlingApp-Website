@@ -1,4 +1,7 @@
 import tailwindcss from "@tailwindcss/vite";
+import { createResolver } from "nuxt/kit";
+
+const { resolve } = createResolver(import.meta.url);
 
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
@@ -9,8 +12,20 @@ export default defineNuxtConfig({
     "@nuxt/fonts",
     "nuxt-i18n-micro",
     "shadcn-nuxt",
+    "@nuxt/icon",
   ],
   css: ["~/assets/css/index.css"],
+  typescript: {
+    tsConfig: {
+      compilerOptions: {
+        moduleResolution: "bundler",
+        module: "esnext",
+      },
+    },
+  },
+  vite: {
+    plugins: [tailwindcss()],
+  },
   app: {
     head: {
       link: [
@@ -55,7 +70,17 @@ export default defineNuxtConfig({
     autoDetectLanguage: false,
     localeCookie: "user-locale",
   },
-  vite: {
-    plugins: [tailwindcss()],
+  icon: {
+    mode: "css",
+    cssLayer: "base",
+    serverBundle: {
+      collections: ["hugeicons"], // <!--- this
+    },
+    customCollections: [
+      {
+        prefix: "app",
+        dir: resolve("./app/assets/icons"),
+      },
+    ],
   },
 });
