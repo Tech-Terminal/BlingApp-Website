@@ -62,8 +62,8 @@ export default defineNuxtConfig({
   },
   i18n: {
     locales: [
-      { code: "en", language: "en-US", dir: "ltr" },
-      { code: "ar", language: "ar-SA", dir: "rtl" },
+      { code: "en", language: "en-US", dir: "ltr", iso: "en-US" },
+      { code: "ar", language: "ar-KW", dir: "rtl", iso: "ar-KW" },
     ],
     defaultLocale: "ar",
     fallbackLocale: "ar",
