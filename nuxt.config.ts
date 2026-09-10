@@ -58,6 +58,10 @@ export default defineNuxtConfig({
         provider: "google",
         weights: [400, 500, 600, 700],
       },
+      {
+        name: "Twemoji Country Flags",
+        provider: "none",
+      },
     ],
   },
   i18n: {

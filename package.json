@@ -24,6 +24,8 @@
     "@vueuse/core": "^14.4.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "country-flag-emoji-polyfill": "^0.1.8",
+    "libphonenumber-js": "^1.12.33",
     "nuxt": "^4.5.2",
     "nuxt-i18n-micro": "^3.28.5",
     "reka-ui": "^2.10.4",

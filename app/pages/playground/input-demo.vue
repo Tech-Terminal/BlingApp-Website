@@ -1,11 +1,12 @@
 <script setup lang="ts">
-import { Input } from "@/components/ui/input";
+import { Input, PhoneInput } from "@/components/ui/input";
 
 useHead({
   title: "Input",
 });
 
 const modelValue = ref("Bound value");
+const phoneValue = ref("");
 </script>
 
 <template>
@@ -25,6 +26,19 @@ const modelValue = ref("Bound value");
       <div class="flex max-w-sm flex-col gap-3">
         <Input v-model="modelValue" placeholder="Type here" />
         <p class="text-sm text-txt-caption">Value: {{ modelValue }}</p>
+      </div>
+    </section>
+
+    <section class="flex flex-col gap-3">
+      <h2 class="text-sm font-medium">Phone (Kuwait)</h2>
+      <div class="flex max-w-sm flex-col gap-3">
+        <PhoneInput v-model="phoneValue" />
+        <p dir="ltr" class="text-sm text-txt-caption">
+          Value: {{ phoneValue || "—" }}
+        </p>
+        <PhoneInput disabled />
+        <PhoneInput aria-invalid="true" default-value="+96550001234" />
+        <PhoneInput loading />
       </div>
     </section>
 
