@@ -5,7 +5,7 @@ import AuthHeader from "~/layouts/components/AuthHeader.vue";
 
 const { t } = useI18n();
 useHead({
-  title: () => String(t("login")),
+  title: () => String(t("signUp")),
 });
 
 definePageMeta({
@@ -19,25 +19,25 @@ const formId = `${useId()}-form`;
 <template>
   <div>
     <AuthHeader
-      :title="t('login.title')"
-      :description="t('login.description')"
+      :title="t('signUp.title')"
+      :description="t('signUp.description')"
     />
     <Form :id="formId" class="flex flex-col gap-6 md:gap-8">
       <Button
         type="submit"
-        :label="t('login.trigger')"
+        :label="t('signUp.trigger')"
         color="primary"
         size="lg"
       />
 
       <p class="font-semi-bold text-center space-x-2">
-        <span>{{ t("noAccount") }}</span>
+        <span>{{ t("haveAccount") }}</span>
         <NuxtLink
           class="text-txt-primary cursor-pointer"
           :to="{
-            path: '/auth/sign-up',
+            path: '/auth/login',
           }"
-          >{{ t("signUp.browserTitle") }}</NuxtLink
+          >{{ t("login.trigger") }}</NuxtLink
         >
       </p>
     </Form>

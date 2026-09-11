@@ -40,5 +40,18 @@
     "title": "Your home deserves a Bling touch",
     "description": "Cleanliness you can rely on, in simple, quick steps."
   },
-  "login": "Login"
+  "login": {
+    "title": "Welcome back",
+    "description": "Sign in to track your bookings with Bling.",
+    "browserTitle": "Login",
+    "trigger": "Sign in"
+  },
+  "noAccount": "Don't have an account?",
+  "haveAccount": "Have an account?",
+  "signUp": {
+    "title": "Let's get started",
+    "description": "One simple step separates you from a clean, tidy home. Sign up and get started right away.",
+    "trigger": "Sign up",
+    "browserTitle": "Sign up"
+  }
 }

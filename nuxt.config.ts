@@ -71,7 +71,6 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "ar",
     defaultDirection: "rtl",
-    strategy: "no_prefix",
     detectBrowserLanguage: false,
   },
   icon: {
@@ -86,5 +85,8 @@ export default defineNuxtConfig({
         dir: resolve("./app/assets/icons"),
       },
     ],
+  },
+  image: {
+    format: ["webp"],
   },
 });
