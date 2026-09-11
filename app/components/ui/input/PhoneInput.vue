@@ -21,19 +21,22 @@ const KW_CALLING_CODE = getCountryCallingCode(KW_COUNTRY);
 const KW_DIAL_CODE = `+${KW_CALLING_CODE}`;
 
 const kwExample = getExampleNumber(KW_COUNTRY, examples);
-const kwPlaceholder = kwExample?.formatNational() ?? "500 12345";
-const kwPattern = kwPlaceholder.replace(/\d/g, "[0-9]");
-const kwMaxLength = kwPlaceholder.length;
+const kwFormat = kwExample?.formatNational() ?? "500 12345";
+const kwPattern = kwFormat.replace(/\d/g, "[0-9]");
+const kwMaxLength = kwFormat.length;
 
 const props = defineProps<{
   defaultValue?: string;
   class?: HTMLAttributes["class"];
   loading?: boolean;
   disabled?: boolean;
+  placeholder?: string;
 }>();
 
 const modelValue = defineModel<string>({ default: "" });
+const { locale } = useI18n();
 
+const dir = computed(() => (locale.value === "ar" ? "rtl" : "ltr"));
 function toNationalDigits(value: string): string {
   const parsed = parsePhoneNumberFromString(value, {
     defaultCountry: KW_COUNTRY,
@@ -120,21 +123,28 @@ watch(modelValue, (value?: string) => {
   <Input
     v-model="displayValue"
     v-bind="$attrs"
-    :class="cn('[direction:ltr]', props.class)"
+    :class="
+      cn(
+        'rtl:flex-row-reverse',
+        {
+          'text-end': dir === 'rtl',
+        },
+        props.class,
+      )
+    "
     :disabled="disabled"
     :loading="loading"
+    :dir="dir"
     type="tel"
     inputmode="tel"
     :pattern="kwPattern"
     :maxlength="kwMaxLength"
     autocomplete="tel-national"
-    dir="ltr"
-    :placeholder="kwPlaceholder"
+    :placeholder="placeholder"
   >
     <template #prefix>
       <span
-        class="flex shrink-0 items-center gap-2 text-sm text-input-text-value"
-        dir="ltr"
+        class="flex shrink-0 items-center gap-2 text-sm text-input-text-value rtl:flex-row-reverse"
       >
         <span
           class="font-flags inline-block shrink-0 text-xl leading-none"
@@ -143,7 +153,7 @@ watch(modelValue, (value?: string) => {
           {{ KW_FLAG }}
         </span>
         <span class="tabular-nums group-has-disabled:text-input-text-disabled">
-          {{ KW_DIAL_CODE }}
+          {{ dir === "rtl" ? "&#x200E;" : "" }}{{ KW_DIAL_CODE }}
         </span>
       </span>
     </template>

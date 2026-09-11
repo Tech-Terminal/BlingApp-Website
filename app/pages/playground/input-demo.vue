@@ -32,13 +32,17 @@ const phoneValue = ref("");
     <section class="flex flex-col gap-3">
       <h2 class="text-sm font-medium">Phone (Kuwait)</h2>
       <div class="flex max-w-sm flex-col gap-3">
-        <PhoneInput v-model="phoneValue" />
+        <PhoneInput v-model="phoneValue" placeholder="500 12345" />
         <p dir="ltr" class="text-sm text-txt-caption">
           Value: {{ phoneValue || "—" }}
         </p>
-        <PhoneInput disabled />
-        <PhoneInput aria-invalid="true" default-value="+96550001234" />
-        <PhoneInput loading />
+        <PhoneInput disabled placeholder="500 12345" />
+        <PhoneInput
+          aria-invalid="true"
+          default-value="+96550001234"
+          placeholder="500 12345"
+        />
+        <PhoneInput loading placeholder="500 12345" />
       </div>
     </section>
 

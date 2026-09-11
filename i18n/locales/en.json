@@ -36,6 +36,9 @@
     "arrayMax": "Must have at most {max} items",
     "arrayLength": "Must have {length} items"
   },
+  "form": {
+    "optional": "Optional"
+  },
   "auth": {
     "title": "Your home deserves a Bling touch",
     "description": "Cleanliness you can rely on, in simple, quick steps."
@@ -44,7 +47,9 @@
     "title": "Welcome back",
     "description": "Sign in to track your bookings with Bling.",
     "browserTitle": "Login",
-    "trigger": "Sign in"
+    "trigger": "Sign in",
+    "phoneDescription": "We'll send you a verification code to confirm your phone number",
+    "phonePlaceholder": "Enter your phone number"
   },
   "noAccount": "Don't have an account?",
   "haveAccount": "Have an account?",
@@ -53,5 +58,6 @@
     "description": "One simple step separates you from a clean, tidy home. Sign up and get started right away.",
     "trigger": "Sign up",
     "browserTitle": "Sign up"
-  }
+  },
+  "phone": "Phone"
 }

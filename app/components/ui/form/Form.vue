@@ -8,7 +8,7 @@ const emit = defineEmits<{
 }>();
 </script>
 <template>
-  <form :id="id" @submit.prevent="emit('submit')">
+  <form :id="id" novalidate @submit.prevent="emit('submit')">
     <slot />
   </form>
 </template>

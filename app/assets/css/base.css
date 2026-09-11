@@ -14,11 +14,6 @@
 
     color-scheme: light;
   }
-  @supports (font-variation-settings: normal) {
-    :root {
-      --font-default: "InterVariable", sans-serif;
-    }
-  }
 
   ::selection {
     background-color: var(--color-bg-primary);

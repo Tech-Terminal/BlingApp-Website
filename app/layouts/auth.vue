@@ -1,4 +1,11 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import AuthHeader from "./components/AuthHeader.vue";
+
+defineProps<{
+  title: string;
+  description: string;
+}>();
+</script>
 <template>
   <div class="grid md:grid-cols-2 h-svh">
     <div class="relative h-full overflow-hidden">
@@ -12,10 +19,12 @@
         class="absolute top-0 flex flex-col items-center justify-center gap-6 w-full md:mt-20 mt-10"
       >
         <AppLogo />
-        <h1 class="font-semi-bold text-4xl text-txt-base">
-          {{ $t("auth.title") }}
-        </h1>
-        <p class="text-txt-base">{{ $t("auth.description") }}</p>
+        <div class="space-y-4 md:space-y-6 text-center">
+          <h1 class="font-semi-bold md:text-4xl text-2xl text-txt-base">
+            {{ $t("auth.title") }}
+          </h1>
+          <p class="text-txt-base">{{ $t("auth.description") }}</p>
+        </div>
       </div>
     </div>
     <main
@@ -27,9 +36,10 @@
       <NuxtImg
         src="/images/wave.png"
         role="presentation"
-        class="w-sm object-center object-contain ms-auto max-md:hidden absolute top-0 inset-e-0"
+        class="w-sm object-center object-contain ms-auto max-md:hidden absolute top-0 inset-e-0 ltr:rotate-y-180"
       />
-      <section class="p-6 max-w-xl mx-auto">
+      <section class="p-6 max-w-xl mx-auto space-y-6 md:space-y-10">
+        <AuthHeader :title="$t(title)" :description="$t(description)" />
         <NuxtPage />
       </section>
     </main>

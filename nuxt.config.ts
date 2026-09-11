@@ -52,15 +52,24 @@ export default defineNuxtConfig({
     },
   },
   fonts: {
+    defaults: {
+      weights: [400, 500, 600, 700],
+      styles: ["normal"],
+      subsets: ["arabic", "latin", "latin-ext"],
+    },
     families: [
       {
         name: "IBM Plex Sans Arabic",
         provider: "google",
-        weights: [400, 500, 600, 700],
+        fallbacks: ["sans-serif"],
+        global: true,
+        preload: true,
       },
       {
         name: "Twemoji Country Flags",
         provider: "none",
+        global: true,
+        preload: true,
       },
     ],
   },
