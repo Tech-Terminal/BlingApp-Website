@@ -1,12 +1,30 @@
 <script setup lang="ts">
+type AppLocale = {
+  code: string;
+  language?: string;
+  dir?: "ltr" | "rtl" | "auto";
+};
+
+const { locale, locales } = useI18n();
+
+const currentLocale = computed(() =>
+  (locales.value as AppLocale[]).find((item) => item.code === locale.value),
+);
+
 useHead({
-  titleTemplate: (title) => (title ? `${title} - Bling` : "Bling"),
+  htmlAttrs: {
+    lang: () => currentLocale.value?.language ?? "ar-KW",
+    dir: () => currentLocale.value?.dir ?? "rtl",
+  },
+  titleTemplate: (title?: string) => (title ? `${title} - Bling` : "Bling"),
 });
 </script>
 
 <template>
   <div>
     <NuxtRouteAnnouncer />
-    <NuxtPage />
+    <NuxtLayout>
+      <NuxtPage />
+    </NuxtLayout>
   </div>
 </template>

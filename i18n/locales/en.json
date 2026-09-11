@@ -35,5 +35,10 @@
     "arrayMin": "Must have at least {min} items",
     "arrayMax": "Must have at most {max} items",
     "arrayLength": "Must have {length} items"
-  }
+  },
+  "auth": {
+    "title": "Your home deserves a Bling touch",
+    "description": "Cleanliness you can rely on, in simple, quick steps."
+  },
+  "login": "Login"
 }

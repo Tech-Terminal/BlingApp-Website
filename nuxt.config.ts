@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     "@nuxt/eslint",
     "@nuxt/image",
     "@nuxt/fonts",
-    "nuxt-i18n-micro",
+    "@nuxtjs/i18n",
     "shadcn-nuxt",
     "@nuxt/icon",
   ],
@@ -66,13 +66,13 @@ export default defineNuxtConfig({
   },
   i18n: {
     locales: [
-      { code: "en", language: "en-US", dir: "ltr", iso: "en-US" },
-      { code: "ar", language: "ar-KW", dir: "rtl", iso: "ar-KW" },
+      { code: "en", language: "en-US", dir: "ltr", file: "en.json" },
+      { code: "ar", language: "ar-KW", dir: "rtl", file: "ar.json" },
     ],
     defaultLocale: "ar",
-    fallbackLocale: "ar",
-    autoDetectLanguage: false,
-    localeCookie: "user-locale",
+    defaultDirection: "rtl",
+    strategy: "no_prefix",
+    detectBrowserLanguage: false,
   },
   icon: {
     mode: "css",
