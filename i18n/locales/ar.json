@@ -59,5 +59,10 @@
     "trigger": "إنشاء حساب",
     "browserTitle": "سجّل الآن"
   },
-  "phone": "رقم الهاتف"
+  "phone": "رقم الهاتف",
+  "otpVerification": {
+    "title": "أدخل رمز التحقق",
+    "description": "أرسلنا رمز مكوّن من 4 أرقام إلى {phone}",
+    "trigger": "تأكيد"
+  }
 }

@@ -59,5 +59,10 @@
     "trigger": "Sign up",
     "browserTitle": "Sign up"
   },
-  "phone": "Phone"
+  "phone": "Phone",
+  "otpVerification": {
+    "title": "Enter verification code",
+    "description": "We sent a 4-digit code to {phone}",
+    "trigger": "Verify"
+  }
 }
