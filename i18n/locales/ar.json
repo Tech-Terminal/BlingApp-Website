@@ -68,5 +68,6 @@
     "browserTitle": "تأكيد الرمز",
     "resendOtpSuccess": "تم إعادة إرسال الرمز بنجاح",
     "resendOtpAfter": "إعادة الإرسال خلال "
-  }
+  },
+  "back": "السابق"
 }

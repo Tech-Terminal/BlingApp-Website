@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import AuthHeader from "./components/AuthHeader.vue";
+import type { RouteLocationRaw } from "vue-router";
+import Button from "~/components/ui/button/Button.vue";
 
 defineProps<{
   title: string;
   description: string;
+  backUrl?: RouteLocationRaw;
 }>();
 </script>
 <template>
@@ -39,7 +41,19 @@ defineProps<{
         class="absolute inset-e-0 top-0 ms-auto w-sm object-contain object-center max-md:hidden ltr:rotate-y-180"
       />
       <section class="mx-auto max-w-xl space-y-6 p-6 md:space-y-10">
-        <AuthHeader :title="$t(title)" :description="$t(description)" />
+        <header class="flex flex-col gap-4">
+          <Button
+            v-if="backUrl"
+            icon="heroicons:arrow-left"
+            size="icon-lg"
+            variant="ghost"
+            class="rtl:rotate-180"
+            :to="backUrl"
+            :aria-label="$t('back')"
+          />
+          <h1 class="text-2xl font-bold md:text-4xl">{{ $t(title) }}</h1>
+          <p class="text-txt-caption md:text-xl">{{ $t(description) }}</p>
+        </header>
         <NuxtPage />
       </section>
     </main>

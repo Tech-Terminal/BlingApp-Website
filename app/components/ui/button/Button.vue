@@ -5,6 +5,8 @@ import type { ButtonVariants } from ".";
 import { Primitive } from "reka-ui";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from ".";
+import type { RouteLocationRaw } from "vue-router";
+import { NuxtLink } from "#components";
 
 interface Props extends PrimitiveProps {
   variant?: ButtonVariants["variant"];
@@ -17,6 +19,9 @@ interface Props extends PrimitiveProps {
   label?: string;
   disabled?: boolean;
   loading?: boolean;
+
+  // link props
+  to?: RouteLocationRaw;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -53,7 +58,8 @@ const iconSize = computed(() => {
     :data-color="color"
     :data-size="size"
     :disabled="resolvedDisabled"
-    :as="as"
+    :as="to ? NuxtLink : as"
+    :to="to"
     :as-child="asChild"
     :class="cn(buttonVariants({ variant, color, size }), props.class)"
   >
@@ -68,7 +74,7 @@ const iconSize = computed(() => {
       class="animate-spin"
       :size="iconSize"
     />
-    <span v-if="label" class="truncate line-clamp-1 text-nowrap">
+    <span v-if="label" class="line-clamp-1 truncate text-nowrap">
       <slot>
         {{ label }}
       </slot>

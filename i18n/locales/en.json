@@ -68,5 +68,6 @@
     "browserTitle": "OTP Verification",
     "resendOtpSuccess": "OTP sent successfully",
     "resendOtpAfter": "You can resend the OTP in "
-  }
+  },
+  "back": "Back"
 }
