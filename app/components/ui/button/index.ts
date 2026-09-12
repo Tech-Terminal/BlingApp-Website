@@ -4,7 +4,7 @@ import { cva } from "class-variance-authority";
 export { default as Button } from "./Button.vue";
 
 export const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-btn text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-20 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-(--btn-solid-hover)/50 focus-visible:ring-3 aria-invalid:ring-border-danger/20 dark:aria-invalid:ring-border-danger/40 aria-invalid:border-border-danger enabled:cursor-pointer",
+  "focus-visible:border-ring inline-flex shrink-0 items-center justify-center gap-2 rounded-btn font-medium whitespace-nowrap transition-all outline-none focus-visible:ring-3 focus-visible:ring-(--btn-solid-hover)/50 enabled:cursor-pointer disabled:pointer-events-none disabled:opacity-20 aria-invalid:border-border-danger aria-invalid:ring-border-danger/20 dark:aria-invalid:ring-border-danger/40 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4",
   {
     variants: {
       color: {
@@ -89,20 +89,20 @@ export const buttonVariants = cva(
       },
       variant: {
         solid:
-          "bg-(--btn-solid) text-(--btn-solid-fg) hover:bg-(--btn-solid-hover) active:bg-(--btn-solid-active) focus-visible:bg-(--btn-solid-focus)",
-        soft: "bg-(--btn-soft) text-(--btn-fg) hover:bg-(--btn-soft-hover) active:bg-(--btn-soft-active) focus-visible:bg-(--btn-soft-hover)",
+          "bg-(--btn-solid) text-(--btn-solid-fg) hover:bg-(--btn-solid-hover) focus-visible:bg-(--btn-solid-focus) active:bg-(--btn-solid-active)",
+        soft: "bg-(--btn-soft) text-(--btn-fg) hover:bg-(--btn-soft-hover) focus-visible:bg-(--btn-soft-hover) active:bg-(--btn-soft-active)",
         ghost:
-          "bg-transparent text-(--btn-fg) hover:bg-(--btn-soft) active:bg-(--btn-soft-active) focus-visible:bg-(--btn-soft)",
+          "bg-transparent text-(--btn-fg) hover:bg-(--btn-soft) focus-visible:bg-(--btn-soft) active:bg-(--btn-soft-active)",
         outline:
-          "border border-(--btn-border) bg-transparent text-(--btn-fg) shadow-xs hover:bg-(--btn-soft) active:bg-(--btn-soft-active) focus-visible:bg-(--btn-soft)",
+          "border border-(--btn-border) bg-transparent text-(--btn-fg) shadow-xs hover:bg-(--btn-soft) focus-visible:bg-(--btn-soft) active:bg-(--btn-soft-active)",
         dashed:
-          "border border-dashed border-(--btn-border) bg-transparent text-(--btn-fg) shadow-xs hover:bg-(--btn-soft) active:bg-(--btn-soft-active) focus-visible:bg-(--btn-soft)",
+          "border border-dashed border-(--btn-border) bg-transparent text-(--btn-fg) shadow-xs hover:bg-(--btn-soft) focus-visible:bg-(--btn-soft) active:bg-(--btn-soft-active)",
       },
       size: {
-        default: "h-9 px-3 py-2 has-[>svg]:px-3 min-w-10",
+        default: "h-9 min-w-10 px-3 py-2 text-sm has-[>svg]:px-3",
         xs: "h-6 gap-1 px-2 text-xs has-[>svg]:px-1.5 [&_svg:not([class*='size-'])]:size-3",
-        sm: "h-9 gap-1.5 px-3 has-[>svg]:px-2.5 min-w-9",
-        lg: "h-(--height-global) min-w-(--height-global) py-2 px-(--padding-md) has-[>svg]:px-4",
+        sm: "h-9 min-w-9 gap-1.5 px-3 has-[>svg]:px-2.5",
+        lg: "h-(--height-global) min-w-(--height-global) px-lg py-2 text-lg has-[>svg]:px-4",
         icon: "size-9",
         "icon-xs": "size-6 [&_svg:not([class*='size-'])]:size-3",
         "icon-sm": "size-8",

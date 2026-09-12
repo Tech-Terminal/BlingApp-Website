@@ -7,20 +7,20 @@ defineProps<{
 }>();
 </script>
 <template>
-  <div class="grid md:grid-cols-2 h-svh">
+  <div class="grid h-svh md:grid-cols-2">
     <div class="relative h-full overflow-hidden">
       <NuxtImg
         src="/images/auth-bg.png"
         role="presentation"
-        class="w-full h-full object-cover object-top"
+        class="h-full w-full object-cover object-top"
         preload
       />
       <div
-        class="absolute top-0 flex flex-col items-center justify-center gap-6 w-full md:mt-20 mt-10"
+        class="absolute top-0 mt-10 flex w-full flex-col items-center justify-center gap-6 md:mt-20"
       >
         <AppLogo />
-        <div class="space-y-4 md:space-y-6 text-center">
-          <h1 class="font-semi-bold md:text-4xl text-2xl text-txt-base">
+        <div class="space-y-4 text-center md:space-y-6">
+          <h1 class="text-2xl font-semibold text-txt-base md:text-4xl">
             {{ $t("auth.title") }}
           </h1>
           <p class="text-txt-base">{{ $t("auth.description") }}</p>
@@ -30,15 +30,15 @@ defineProps<{
     <main
       :class="[
         'content-center',
-        'max-md:absolute max-md:bottom-0 max-md:inset-x-0 max-md:w-full max-md:bg-bg-bg max-md:rounded-t-3xl',
+        'max-md:absolute max-md:inset-x-0 max-md:bottom-0 max-md:w-full max-md:rounded-t-3xl max-md:bg-bg-bg',
       ]"
     >
       <NuxtImg
         src="/images/wave.png"
         role="presentation"
-        class="w-sm object-center object-contain ms-auto max-md:hidden absolute top-0 inset-e-0 ltr:rotate-y-180"
+        class="absolute inset-e-0 top-0 ms-auto w-sm object-contain object-center max-md:hidden ltr:rotate-y-180"
       />
-      <section class="p-6 max-w-xl mx-auto space-y-6 md:space-y-10">
+      <section class="mx-auto max-w-xl space-y-6 p-6 md:space-y-10">
         <AuthHeader :title="$t(title)" :description="$t(description)" />
         <NuxtPage />
       </section>

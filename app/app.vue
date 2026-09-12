@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import "vue-sonner/style.css";
+import { Toaster } from "@/components/ui/sonner";
+
 type AppLocale = {
   code: string;
   language?: string;
@@ -26,5 +29,6 @@ useHead({
     <NuxtLayout>
       <NuxtPage />
     </NuxtLayout>
+    <Toaster />
   </div>
 </template>

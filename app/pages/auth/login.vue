@@ -39,10 +39,10 @@ const formId = `${useId()}-form`;
       size="lg"
     />
 
-    <p class="font-semi-bold text-center space-x-2">
+    <p class="space-x-2 text-center font-semibold">
       <span>{{ t("noAccount") }}</span>
       <NuxtLink
-        class="text-txt-primary cursor-pointer"
+        class="cursor-pointer text-txt-primary"
         :to="{
           path: '/auth/sign-up',
         }"
