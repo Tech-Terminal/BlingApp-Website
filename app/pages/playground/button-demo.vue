@@ -41,11 +41,7 @@ const btnIconSize: NonNullable<ButtonVariants["size"]>[] = [
   <main class="flex flex-col gap-8">
     <h1 class="text-xl font-medium">Button</h1>
 
-    <section
-      v-for="color in colors"
-      :key="color"
-      class="flex flex-col gap-3"
-    >
+    <section v-for="color in colors" :key="color" class="flex flex-col gap-3">
       <h2 class="text-sm font-medium capitalize">{{ color }}</h2>
       <div class="flex flex-wrap items-center gap-3">
         <Button

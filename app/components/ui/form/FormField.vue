@@ -54,7 +54,7 @@ const showOptional = computed(() => props.optional && !props.required);
             >*</span
           >
         </FormLabel>
-        <span v-if="showOptional" class="text-txt-caption text-xs">
+        <span v-if="showOptional" class="text-xs text-txt-caption">
           {{ t("form.optional") }}
         </span>
       </div>

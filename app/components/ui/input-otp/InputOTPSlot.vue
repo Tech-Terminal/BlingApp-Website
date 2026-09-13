@@ -24,9 +24,9 @@ const slot = computed(() => context?.value.slots[props.index]);
     :data-active="slot?.isActive"
     :class="
       cn(
-        'border-input-border-default border-(length:--border-input) relative flex size-12 items-center justify-center text-sm shadow-xs transition-all outline-none rounded-full',
-        'data-[active=true]:border-input-border-focused data-[active=true]:ring-shades-primary-1 data-[active=true]:aria-invalid:ring-shades-danger-1 data-[active=true]:ring-3 data-[active=true]:z-10',
-        'aria-invalid:border-input-border-error  data-[active=true]:aria-invalid:border-input-border-error',
+        'relative flex size-12 items-center justify-center rounded-full border-(length:--border-input) border-input-border-default text-sm shadow-xs transition-all outline-none',
+        'data-[active=true]:z-10 data-[active=true]:border-input-border-focused data-[active=true]:ring-3 data-[active=true]:ring-shades-primary-1 data-[active=true]:aria-invalid:ring-shades-danger-1',
+        'aria-invalid:border-input-border-error data-[active=true]:aria-invalid:border-input-border-error',
         !slot?.char && 'text-input-text-placeholder',
         props.class,
       )
@@ -38,7 +38,7 @@ const slot = computed(() => context?.value.slots[props.index]);
       class="pointer-events-none absolute inset-0 flex items-center justify-center"
     >
       <div
-        class="animate-caret-blink bg-input-text-value h-4 w-px duration-1000"
+        class="h-4 w-px animate-caret-blink bg-input-text-value duration-1000"
       />
     </div>
   </div>

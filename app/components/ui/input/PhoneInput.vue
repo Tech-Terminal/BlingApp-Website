@@ -147,7 +147,7 @@ watch(modelValue, (value?: string) => {
         class="flex shrink-0 items-center gap-2 text-sm text-input-text-value rtl:flex-row-reverse"
       >
         <span
-          class="font-flags inline-block shrink-0 text-xl leading-none"
+          class="inline-block shrink-0 font-flags text-xl leading-none"
           aria-hidden="true"
         >
           {{ KW_FLAG }}

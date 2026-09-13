@@ -41,14 +41,14 @@ const iconSize = 20;
   <div
     :class="
       cn(
-        'group relative flex h-input w-full min-w-0 items-center gap-input rounded-input border-(length:--border-input) bg-bg-bg px-input-x py-input-y text-sm text-input-text-value outline-none transition-colors',
+        'group relative flex h-input w-full min-w-0 items-center gap-input rounded-input border-(length:--border-input) bg-bg-bg px-input-x py-input-y text-sm text-input-text-value transition-colors outline-none',
         'border-input-border-default',
         'has-enabled:not-has-[input:read-only]:hover:border-border-primary',
         'has-enabled:not-has-[input:read-only]:focus-within:border-input-border-focused has-enabled:not-has-[input:read-only]:focus-within:ring-3 has-enabled:not-has-[input:read-only]:focus-within:ring-shades-primary-1',
         'has-[input:read-only]:bg-btn-default-default',
         'has-disabled:cursor-not-allowed has-disabled:border-input-border-disabled has-disabled:bg-input-bg-disabled has-disabled:text-input-text-disabled',
         'has-aria-invalid:border-input-border-error has-aria-invalid:text-input-text-error',
-        'has-aria-invalid:hover:border-input-border-error has-aria-invalid:focus-within:border-input-border-error has-aria-invalid:focus-within:ring-shades-danger-1',
+        'has-aria-invalid:focus-within:border-input-border-error has-aria-invalid:focus-within:ring-shades-danger-1 has-aria-invalid:hover:border-input-border-error',
         props.class,
       )
     "

@@ -45,7 +45,7 @@
     background-color: var(--scrollbar-thumb-hover-bg);
   }
   body {
-    @apply bg-bg-bg text-txt-default text-base;
+    @apply bg-bg-bg text-base text-txt-default;
   }
 
   input,

@@ -54,12 +54,7 @@ const imageProps = computed(() => ({
 </script>
 
 <template>
-  <NuxtLink
-    v-if="to"
-    :to="to"
-    :aria-label="alt"
-    class="inline-flex shrink-0"
-  >
+  <NuxtLink v-if="to" :to="to" :aria-label="alt" class="inline-flex shrink-0">
     <NuxtImg v-bind="imageProps" />
   </NuxtLink>
   <NuxtImg v-else v-bind="imageProps" />

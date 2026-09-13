@@ -17,7 +17,7 @@ const forwarded = useForwardProps(delegatedProps);
     v-bind="forwarded"
     :class="
       cn(
-        'flex items-center gap-8 justify-center rtl:flex-row-reverse',
+        'flex items-center justify-center gap-8 rtl:flex-row-reverse',
         props.class,
       )
     "
