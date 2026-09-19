@@ -9,7 +9,7 @@ defineProps<{
 }>();
 </script>
 <template>
-  <div class="grid h-svh max-md:grid-rows-[15rem_auto] md:grid-cols-2">
+  <div class="grid h-svh md:grid-cols-2">
     <div class="relative h-full overflow-hidden">
       <NuxtImg
         src="/images/auth-bg.png"
@@ -18,7 +18,7 @@ defineProps<{
         preload
       />
       <div
-        class="absolute top-0 mt-10 flex w-full flex-col items-center justify-center gap-6 md:mt-20"
+        class="absolute top-0 mt-10 flex w-full flex-col items-center justify-center gap-6 max-md:row-span-2 md:mt-20"
       >
         <AppLogo class="w-40" />
         <div class="space-y-4 text-center md:space-y-6">
@@ -30,7 +30,11 @@ defineProps<{
       </div>
     </div>
     <main
-      :class="['md:content-center', 'overflow-hidden rounded-3xl bg-bg-bg']"
+      :class="[
+        'md:content-center',
+        'rounded-t-3xl bg-bg-bg',
+        'inset-x-0 bottom-0 max-md:absolute max-md:top-60',
+      ]"
     >
       <NuxtImg
         src="/images/wave.png"
