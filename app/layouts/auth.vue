@@ -9,7 +9,7 @@ defineProps<{
 }>();
 </script>
 <template>
-  <div class="grid h-svh md:grid-cols-2">
+  <div class="grid h-svh max-md:grid-rows-[15rem_auto] md:grid-cols-2">
     <div class="relative h-full overflow-hidden">
       <NuxtImg
         src="/images/auth-bg.png"
@@ -20,7 +20,7 @@ defineProps<{
       <div
         class="absolute top-0 mt-10 flex w-full flex-col items-center justify-center gap-6 md:mt-20"
       >
-        <AppLogo />
+        <AppLogo class="w-40" />
         <div class="space-y-4 text-center md:space-y-6">
           <h1 class="text-2xl font-semibold text-txt-base md:text-4xl">
             {{ $t("auth.title") }}
@@ -30,10 +30,7 @@ defineProps<{
       </div>
     </div>
     <main
-      :class="[
-        'content-center',
-        'max-md:absolute max-md:inset-x-0 max-md:bottom-0 max-md:w-full max-md:rounded-t-3xl max-md:bg-bg-bg',
-      ]"
+      :class="['md:content-center', 'overflow-hidden rounded-3xl bg-bg-bg']"
     >
       <NuxtImg
         src="/images/wave.png"

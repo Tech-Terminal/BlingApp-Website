@@ -98,4 +98,10 @@ export default defineNuxtConfig({
   image: {
     format: ["webp"],
   },
+  runtimeConfig: {
+    apiBase: "",
+    public: {
+      apiBase: "/api",
+    },
+  },
 });

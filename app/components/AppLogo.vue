@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import type { HTMLAttributes } from "vue";
+import { cn } from "~/lib/utils";
+
 const INTRINSIC_WIDTH = 216;
 const INTRINSIC_HEIGHT = 107;
 const ASPECT_RATIO = INTRINSIC_WIDTH / INTRINSIC_HEIGHT;
@@ -10,6 +13,7 @@ const props = withDefaults(
     alt?: string;
     to?: string;
     preload?: boolean;
+    class?: HTMLAttributes["class"];
   }>(),
   {
     alt: "Bling",
@@ -49,7 +53,7 @@ const imageProps = computed(() => ({
   densities: "x1 x2",
   preload: props.preload,
   format: "webp",
-  class: "h-auto max-w-full",
+  class: cn("h-auto max-w-full", props.class),
 }));
 </script>
 

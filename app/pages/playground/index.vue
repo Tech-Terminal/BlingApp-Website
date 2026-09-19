@@ -1,25 +1,31 @@
-<script setup lang="ts">
-useHead({
-  title: "Playground",
-});
-</script>
-
 <template>
-  <div class="flex flex-col gap-4">
-    <h1 class="text-xl font-medium">Playground</h1>
-    <p dir="ltr" class="text-txt-caption">
-      Isolated pages for trying out UI components without touching the app
-      shell.
-    </p>
-    <div class="flex flex-wrap gap-3">
-      <NuxtLink
-        v-for="page in playgroundPages"
-        :key="page.to"
-        :to="page.to"
-        class="w-fit rounded-md border border-border-default px-3 py-2 text-sm"
-      >
-        {{ page.label }}
-      </NuxtLink>
+  <div class="flex min-h-svh">
+    <aside
+      class="flex w-56 shrink-0 flex-col gap-4 border-e border-border-default p-4"
+    >
+      <NuxtLink to="/" class="text-sm font-medium">Bling</NuxtLink>
+      <nav class="flex flex-col gap-1">
+        <NuxtLink
+          to="/playground"
+          class="rounded-md px-2 py-1.5 text-sm"
+          active-class=""
+          exact-active-class="bg-shades-primary-1 text-txt-primary"
+        >
+          Overview
+        </NuxtLink>
+        <NuxtLink
+          v-for="page in playgroundPages"
+          :key="page.to"
+          :to="page.to"
+          class="rounded-md px-2 py-1.5 text-sm"
+          active-class="bg-shades-primary-1 text-txt-primary"
+        >
+          {{ page.label }}
+        </NuxtLink>
+      </nav>
+    </aside>
+    <div class="min-w-0 flex-1 p-8">
+      <NuxtPage />
     </div>
   </div>
 </template>

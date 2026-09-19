@@ -57,8 +57,14 @@
     "title": "Let's get started",
     "description": "One simple step separates you from a clean, tidy home. Sign up and get started right away.",
     "trigger": "Sign up",
-    "browserTitle": "Sign up"
+    "browserTitle": "Sign up",
+    "namePlaceholder": "Enter your name",
+    "phonePlaceholder": "Enter your phone number",
+    "phoneDescription": "We'll send you a verification code to confirm",
+    "termsPrefix": "By continuing to create an account, you agree to ",
+    "termsLink": "the Terms and Conditions and Privacy Policy"
   },
+  "name": "Name",
   "phone": "Phone",
   "otpVerification": {
     "title": "Enter verification code",

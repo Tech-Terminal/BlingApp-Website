@@ -8,6 +8,7 @@
 @import "./sizing.css";
 @import "./components.css";
 @import "./base.css";
+@import "./utilities.css";
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));

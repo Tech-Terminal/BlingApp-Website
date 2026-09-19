@@ -57,8 +57,14 @@
     "title": "يلا نبدأ",
     "description": "خطوة وحدة تفصلك عن بيت نظيف ومرتب، سجّل وابدأ فوراً.",
     "trigger": "إنشاء حساب",
-    "browserTitle": "سجّل الآن"
+    "browserTitle": "سجّل الآن",
+    "namePlaceholder": "أدخل اسمك",
+    "phonePlaceholder": "أدخل رقم هاتفك",
+    "phoneDescription": "راح نرسل لك رمز تحقق للتأكيد",
+    "termsPrefix": "بمتابعتك إنشاء الحساب، فإنك توافق على ",
+    "termsLink": "الشروط والأحكام وسياسة الخصوصية"
   },
+  "name": "الاسم",
   "phone": "رقم الهاتف",
   "otpVerification": {
     "title": "أدخل رمز التحقق",
