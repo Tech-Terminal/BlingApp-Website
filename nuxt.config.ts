@@ -15,14 +15,6 @@ export default defineNuxtConfig({
     "@nuxt/icon",
   ],
   css: ["~/assets/css/index.css"],
-  typescript: {
-    tsConfig: {
-      compilerOptions: {
-        moduleResolution: "bundler",
-        module: "esnext",
-      },
-    },
-  },
   vite: {
     plugins: [tailwindcss()],
   },
@@ -99,7 +91,7 @@ export default defineNuxtConfig({
     format: ["webp"],
   },
   runtimeConfig: {
-    apiBase: "",
+    backendBase: "",
     public: {
       apiBase: "/api",
     },

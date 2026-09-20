@@ -8,7 +8,14 @@
     </ul>
     <div class="space-x-4 self-end">
       <LayoutLangSwitcher />
-      <UiButton :label="$t('login.trigger')" size="lg" color="primary" />
+      <UiButton
+        :label="$t('login.trigger')"
+        size="lg"
+        color="primary"
+        :to="{
+          path: '/auth/login',
+        }"
+      />
     </div>
   </nav>
 </template>

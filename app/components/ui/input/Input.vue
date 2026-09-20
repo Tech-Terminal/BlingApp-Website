@@ -13,6 +13,7 @@ const props = defineProps<{
   suffixIcon?: string;
   loading?: boolean;
   disabled?: boolean;
+  inputClass?: HTMLAttributes["class"];
 }>();
 
 const emits = defineEmits<{
@@ -82,6 +83,7 @@ const iconSize = 20;
           'read-only:cursor-default',
           'disabled:cursor-not-allowed disabled:text-input-text-disabled disabled:placeholder:text-input-text-disabled',
           'aria-invalid:text-input-text-error',
+          props.inputClass,
         )
       "
     />

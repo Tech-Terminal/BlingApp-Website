@@ -123,18 +123,14 @@ watch(modelValue, (value?: string) => {
   <Input
     v-model="displayValue"
     v-bind="$attrs"
-    :class="
-      cn(
-        'rtl:flex-row-reverse',
-        {
-          'text-end': dir === 'rtl',
-        },
-        props.class,
-      )
+    :input-class="
+      cn({
+        'placeholder:text-end': dir === 'rtl',
+      })
     "
+    :class="cn('rtl:flex-row-reverse', props.class)"
     :disabled="disabled"
     :loading="loading"
-    :dir="dir"
     type="tel"
     inputmode="tel"
     :pattern="kwPattern"
