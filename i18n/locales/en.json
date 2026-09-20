@@ -45,10 +45,10 @@
     "title": "Your home deserves a Bling touch",
     "description": "Cleanliness you can rely on, in simple, quick steps."
   },
-  "login": {
+  "signIn": {
     "title": "Welcome back",
     "description": "Sign in to track your bookings with Bling.",
-    "browserTitle": "Login",
+    "browserTitle": "Sign in",
     "trigger": "Sign in",
     "phoneDescription": "We'll send you a verification code to confirm your phone number",
     "phonePlaceholder": "Enter your phone number"

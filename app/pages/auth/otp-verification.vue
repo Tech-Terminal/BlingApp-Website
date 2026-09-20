@@ -16,7 +16,7 @@ definePageMeta({
     props: {
       title: "otpVerification.title",
       description: "otpVerification.description",
-      backUrl: "/auth/login",
+      backUrl: "/auth/sign-in",
     },
   },
 });

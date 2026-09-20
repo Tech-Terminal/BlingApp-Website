@@ -9,11 +9,11 @@
     <div class="space-x-4 self-end">
       <LayoutLangSwitcher />
       <UiButton
-        :label="$t('login.trigger')"
+        :label="$t('signIn.trigger')"
         size="lg"
         color="primary"
         :to="{
-          path: '/auth/login',
+          path: '/auth/sign-in',
         }"
       />
     </div>

@@ -65,9 +65,9 @@ const formId = `${useId()}-form`;
       <NuxtLink
         class="cursor-pointer text-txt-primary"
         :to="{
-          path: '/auth/login',
+          path: '/auth/sign-in',
         }"
-        >{{ t("login.trigger") }}</NuxtLink
+        >{{ t("signIn.trigger") }}</NuxtLink
       >
     </p>
   </Form>
