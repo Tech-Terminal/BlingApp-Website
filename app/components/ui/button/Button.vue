@@ -6,7 +6,7 @@ import { Primitive } from "reka-ui";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from ".";
 import type { RouteLocationRaw } from "vue-router";
-import { NuxtLink } from "#components";
+import { NuxtLinkLocale } from "#components";
 
 interface Props extends PrimitiveProps {
   variant?: ButtonVariants["variant"];
@@ -58,7 +58,7 @@ const iconSize = computed(() => {
     :data-color="color"
     :data-size="size"
     :disabled="resolvedDisabled"
-    :as="to ? NuxtLink : as"
+    :as="to ? NuxtLinkLocale : as"
     :to="to"
     :as-child="asChild"
     :class="cn(buttonVariants({ variant, color, size }), props.class)"

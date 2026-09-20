@@ -48,9 +48,9 @@ const formId = `${useId()}-form`;
 
     <p class="text-center leading-md">
       <span>{{ t("signUp.termsPrefix") }}</span>
-      <NuxtLink class="font-semibold text-txt-default">
+      <NuxtLinkLocale class="font-semibold text-txt-default">
         {{ t("signUp.termsLink") }}
-      </NuxtLink>
+      </NuxtLinkLocale>
     </p>
 
     <Button
@@ -62,12 +62,12 @@ const formId = `${useId()}-form`;
 
     <p class="space-x-2 text-center font-semibold">
       <span>{{ t("haveAccount") }}</span>
-      <NuxtLink
+      <NuxtLinkLocale
         class="cursor-pointer text-txt-primary"
         :to="{
           path: '/auth/sign-in',
         }"
-        >{{ t("signIn.trigger") }}</NuxtLink
+        >{{ t("signIn.trigger") }}</NuxtLinkLocale
       >
     </p>
   </Form>

@@ -10,15 +10,15 @@ const { t } = useI18n();
 
 const localePath = useLocalePath();
 useHead({
-  title: () => String(t("signIn.browserTitle")),
+  title: () => String(t("login.browserTitle")),
 });
 
 definePageMeta({
   layout: {
     name: "auth",
     props: {
-      title: "signIn.title",
-      description: "signIn.description",
+      title: "login.title",
+      description: "login.description",
     },
   },
 });
@@ -37,7 +37,7 @@ const { handleSubmit, meta, isSubmitting } = useForm<TForm>({
 
 const submit = handleSubmit(async (values, ctx) => {
   try {
-    const response = await $fetch<ApiResponse>("/api/auth/sign-in", {
+    const response = await $fetch<ApiResponse>("/api/auth/login", {
       method: "POST",
       body: values,
     });
@@ -58,16 +58,16 @@ const submit = handleSubmit(async (values, ctx) => {
       <FormField v-slot="{ componentField }" name="phone" :label="t('phone')">
         <PhoneInput
           :model-value="componentField.modelValue"
-          :placeholder="t('signIn.phonePlaceholder')"
+          :placeholder="t('login.phonePlaceholder')"
           @update:model-value="componentField['onUpdate:modelValue']"
         />
       </FormField>
-      <p class="text-sm">{{ t("signIn.phoneDescription") }}</p>
+      <p class="text-sm">{{ t("login.phoneDescription") }}</p>
     </div>
 
     <Button
       type="submit"
-      :label="t('signIn.trigger')"
+      :label="t('login.trigger')"
       color="primary"
       size="lg"
       :disabled="!meta.dirty"
