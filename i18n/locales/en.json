@@ -12,6 +12,8 @@
     "stringMax": "Must be at most {max} characters",
     "matches": "Invalid format",
     "email": "Must be a valid email",
+    "phone": "Must be a valid phone number",
+    "kuwaitPhone": "Must be a valid Kuwaiti phone number",
     "url": "Must be a valid URL",
     "uuid": "Must be a valid UUID",
     "datetime": "Must be a valid date and time",
