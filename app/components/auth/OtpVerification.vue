@@ -6,6 +6,7 @@ import { formatCount } from "~/utils/formatters";
 import * as yup from "yup";
 import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/yup";
+import type { AppClient } from "~~/shared/types/models";
 
 const props = defineProps<{
   phone: string;
@@ -34,7 +35,7 @@ const { handleSubmit, isSubmitting, meta } = useForm({
 
 const onSubmit = handleSubmit(async (data, ctx) => {
   try {
-    const response = await $fetch<ApiResponse>(props.verifyOtpUrl, {
+    const response = await $fetch<ApiResponse<AppClient>>(props.verifyOtpUrl, {
       method: "POST",
       body: data,
     });

@@ -29,21 +29,20 @@ export const useResendOtp = (phone: string) => {
     start();
   };
 
-  const { pending: isPending, execute: resendCode } = useFetch(
-    "/api/auth/resend-otp",
-    {
-      method: "POST",
-      body: {
-        phone,
-      },
-      immediate: false,
-      onResponseError: () => {},
-      onResponse: () => {
-        toast.success(t("otpVerification.resendOtpSuccess"));
-        setDelaySeconds();
-      },
+  const { pending: isPending, execute: resendCode } = useFetch<
+    ApiResponse<number>
+  >("/api/auth/resend-otp", {
+    method: "POST",
+    body: {
+      phone,
     },
-  );
+    immediate: false,
+    onResponseError: () => {},
+    onResponse: () => {
+      toast.success(t("otpVerification.resendOtpSuccess"));
+      setDelaySeconds();
+    },
+  });
 
   return {
     resendCode,

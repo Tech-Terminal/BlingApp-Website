@@ -9,5 +9,6 @@ export default defineEventHandler(async (event) => {
     method: "POST",
     body,
   });
-  return response.data;
+
+  return response;
 });
