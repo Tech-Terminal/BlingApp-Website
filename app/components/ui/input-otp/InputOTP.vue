@@ -8,7 +8,12 @@ import { cn } from "@/lib/utils";
 import { InputOTPGroup, InputOTPSlot } from ".";
 
 const props = withDefaults(
-  defineProps<OTPInputProps & { class?: HTMLAttributes["class"] }>(),
+  defineProps<
+    Omit<OTPInputProps, "maxlength"> & {
+      class?: HTMLAttributes["class"];
+      maxlength?: number;
+    }
+  >(),
   {
     maxlength: 4,
   },
