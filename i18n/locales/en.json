@@ -74,6 +74,7 @@
     "trigger": "Verify",
     "resendOtp": "Resend OTP",
     "browserTitle": "OTP Verification",
+    "success": "OTP verified successfully",
     "resendOtpSuccess": "OTP sent successfully",
     "resendOtpAfter": "You can resend the OTP in "
   },

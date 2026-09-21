@@ -72,7 +72,11 @@ export default defineNuxtConfig({
     ],
     defaultLocale: "ar",
     defaultDirection: "rtl",
-    detectBrowserLanguage: false,
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: "i18n_redirected",
+      redirectOn: "root",
+    },
   },
   icon: {
     mode: "css",

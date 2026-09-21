@@ -15,7 +15,7 @@ const props = withDefaults(
     }
   >(),
   {
-    maxlength: 4,
+    maxlength: 6,
   },
 );
 
@@ -40,6 +40,7 @@ const forwarded = useForwardPropsEmits(
     data-slot="input-otp"
     :pattern="REGEXP_ONLY_DIGITS"
     class="disabled:cursor-not-allowed"
+    :placeholder="'-'.repeat(props.maxlength)"
   >
     <InputOTPGroup>
       <template v-for="(i, index) in slotProps.slots" :key="index">

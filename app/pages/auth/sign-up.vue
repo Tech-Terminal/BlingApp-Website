@@ -11,19 +11,16 @@ useHead({
 });
 
 definePageMeta({
-  layout: {
-    name: "auth",
-    props: {
-      title: "signUp.title",
-      description: "signUp.description",
-    },
-  },
+  layout: "auth",
 });
 
 const formId = `${useId()}-form`;
 </script>
 <template>
-  <Form :id="formId" class="flex flex-col gap-6 md:gap-8">
+  <div class="flex flex-col gap-6 md:gap-8">
+    <AuthOtpVerification />
+    <AuthHeader title="signUp.title" description="signUp.description" />
+    <Form :id="formId" class="flex flex-col gap-6 md:gap-8">
     <div class="flex flex-col gap-6 md:gap-8">
       <FormField v-slot="{ componentField }" name="name" :label="t('name')">
         <Input
@@ -71,4 +68,5 @@ const formId = `${useId()}-form`;
       >
     </p>
   </Form>
+  </div>
 </template>
