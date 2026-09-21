@@ -8,7 +8,7 @@ import { useForm } from "vee-validate";
 import { toTypedSchema } from "@vee-validate/yup";
 
 const props = defineProps<{
-  phone?: string;
+  phone: string;
   verifyOtpUrl: string;
 }>();
 
@@ -21,7 +21,7 @@ const { t } = useI18n();
 
 const formId = `${useId()}-form`;
 
-const { resendCode, isPending, remaining } = useResendOtp();
+const { resendCode, isPending, remaining } = useResendOtp(props.phone);
 
 const schema = yup.object({
   phone: yup.string().kuwaitPhone().required().default(props.phone),

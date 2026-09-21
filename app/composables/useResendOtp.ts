@@ -1,7 +1,7 @@
 import { ref, shallowRef } from "vue";
 import { useCountdown } from "@vueuse/core";
 
-export const useResendOtp = () => {
+export const useResendOtp = (phone: string) => {
   const countdown = shallowRef(60);
   const { t } = useI18n();
   const { remaining, start } = useCountdown(countdown, {
@@ -29,13 +29,21 @@ export const useResendOtp = () => {
     start();
   };
 
-  const { pending: isPending, execute: resendCode } = useFetch("", {
-    onResponseError: () => {},
-    onResponse: () => {
-      toast.success(t("otpVerification.resendOtpSuccess"));
-      setDelaySeconds();
+  const { pending: isPending, execute: resendCode } = useFetch(
+    "/api/auth/resend-otp",
+    {
+      method: "POST",
+      body: {
+        phone,
+      },
+      immediate: false,
+      onResponseError: () => {},
+      onResponse: () => {
+        toast.success(t("otpVerification.resendOtpSuccess"));
+        setDelaySeconds();
+      },
     },
-  });
+  );
 
   return {
     resendCode,
