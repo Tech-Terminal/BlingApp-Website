@@ -23,7 +23,7 @@
       :class="[
         'md:content-center',
         'rounded-t-3xl bg-bg-bg',
-        'inset-x-0 bottom-0 max-md:absolute max-md:top-60',
+        'inset-x-0 bottom-0 max-md:absolute max-md:top-64',
       ]"
     >
       <NuxtImg
