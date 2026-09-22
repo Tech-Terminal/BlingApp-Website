@@ -13,6 +13,7 @@ export default defineNuxtConfig({
     "@nuxtjs/i18n",
     "shadcn-nuxt",
     "@nuxt/icon",
+    "nuxt-spyglass",
   ],
   css: ["~/assets/css/index.css"],
   vite: {
@@ -99,5 +100,11 @@ export default defineNuxtConfig({
     public: {
       apiBase: "/api",
     },
+  },
+  spyglass: {
+    enabled: true,
+    logFile: ".data/spyglass/logs.ndjson",
+    maxFileSize: 5 * 1024 * 1024,
+    mcpHint: true,
   },
 });
