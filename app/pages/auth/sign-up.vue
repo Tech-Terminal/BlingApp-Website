@@ -31,7 +31,7 @@ const otpVerificationSuccess = () => {
   <Transition name="fade" mode="out-in">
     <AuthOtpVerification
       v-if="currentStep === 'otpVerification'"
-      :verify-otp-url="'/api/auth/verify-register-otp'"
+      purpose="register"
       :phone="phone"
       @back="goTo('signUp')"
       @success="otpVerificationSuccess"

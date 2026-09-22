@@ -41,7 +41,10 @@ const showOptional = computed(() => props.optional && !props.required);
     :name="name"
     :rules="rules"
     :validate-on-mount="validateOnMount"
-    :validate-on-input="true"
+    :validate-on-change="false"
+    :validate-on-model-update="true"
+    :validate-on-blur="true"
+    :validate-on-input="false"
   >
     <FormItem :class="cn(props.class)">
       <div

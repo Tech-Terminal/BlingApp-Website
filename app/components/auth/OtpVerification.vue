@@ -10,7 +10,7 @@ import type { AppClient } from "~~/shared/types/models";
 
 const props = defineProps<{
   phone: string;
-  verifyOtpUrl: string;
+  purpose: "login" | "register";
 }>();
 
 const emit = defineEmits<{
@@ -31,14 +31,26 @@ const schema = yup.object({
 
 const { handleSubmit, isSubmitting, meta } = useForm({
   validationSchema: toTypedSchema(schema),
+  validateOnMount: false,
+  initialErrors: {
+    phone: "",
+    otp: "",
+  },
+  initialValues: {
+    phone: props.phone,
+    otp: "",
+  },
 });
 
 const onSubmit = handleSubmit(async (data, ctx) => {
   try {
-    const response = await $fetch<ApiResponse<AppClient>>(props.verifyOtpUrl, {
-      method: "POST",
-      body: data,
-    });
+    const response = await $fetch<ApiResponse<AppClient>>(
+      "/api/auth/verify-otp",
+      {
+        method: "POST",
+        body: { ...data, purpose: props.purpose },
+      },
+    );
 
     toast.success(response?.message ?? t("otpVerification.success"));
 
