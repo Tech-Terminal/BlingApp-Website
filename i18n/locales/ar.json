@@ -70,7 +70,7 @@
   "phone": "رقم الهاتف",
   "otpVerification": {
     "title": "أدخل رمز التحقق",
-    "description": "أرسلنا رمز مكوّن من 4 أرقام إلى {phone}",
+    "description": "أرسلنا رمز مكوّن من 6 أرقام إلى {phone}",
     "trigger": "تأكيد",
     "resendOtp": "إعادة إرسال الرمز",
     "browserTitle": "تأكيد الرمز",

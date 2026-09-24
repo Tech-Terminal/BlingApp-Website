@@ -70,7 +70,7 @@
   "phone": "Phone",
   "otpVerification": {
     "title": "Enter verification code",
-    "description": "We sent a 4-digit code to {phone}",
+    "description": "We sent a 6-digit code to {phone}",
     "trigger": "Verify",
     "resendOtp": "Resend OTP",
     "browserTitle": "OTP Verification",
