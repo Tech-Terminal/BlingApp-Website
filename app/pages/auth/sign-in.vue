@@ -2,6 +2,7 @@
 import { useStepper } from "@vueuse/core";
 
 const { t } = useI18n();
+const { setUser } = useAuth();
 const localePath = useLocalePath();
 const { goTo, current: currentStep } = useStepper(
   ["signIn", "otpVerification"],
@@ -23,7 +24,8 @@ const goToVerifications = async (p: string) => {
   phone.value = p;
 };
 
-const otpVerificationSuccess = () => {
+const otpVerificationSuccess = (data: AppClient) => {
+  setUser(data);
   navigateTo(localePath("/"));
 };
 </script>

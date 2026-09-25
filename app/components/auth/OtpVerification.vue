@@ -15,7 +15,7 @@ const props = defineProps<{
 
 const emit = defineEmits<{
   back: [];
-  success: [];
+  success: [data: AppClient];
 }>();
 
 const { t } = useI18n();
@@ -54,7 +54,7 @@ const onSubmit = handleSubmit(async (data, ctx) => {
 
     toast.success(response?.message ?? t("otpVerification.success"));
 
-    emit("success");
+    emit("success", response?.data as AppClient);
   } catch (error) {
     handleApiFormError(error, ctx.setErrors);
   }
